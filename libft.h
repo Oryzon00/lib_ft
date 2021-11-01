@@ -1,0 +1,17 @@
+#ifndef LIB_FT_H
+#define LIB_FT_H
+
+#include <stddef.h>
+
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isacii(int c);
+int	ft_isprint(int c);
+size_t	strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+int	toupper(int c);
+int	tolower(int c);
+
+#endif
