@@ -2,16 +2,20 @@
 #define LIB_FT_H
 
 #include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
 int	ft_isacii(int c);
 int	ft_isprint(int c);
-size_t	strlen(const char *s);
+size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
-int	toupper(int c);
-int	tolower(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
+void	*ft_calloc(size_t nmemb, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
