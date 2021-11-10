@@ -13,5 +13,7 @@ char	*ft_strrchr(const char *s, int c)
 			output = (char*)(&s[i]);
 		i++;
 	}
+	if (c == 0)
+		return ((char *)(&s[i]));
 	return (output);
 }

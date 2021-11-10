@@ -2,7 +2,6 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	(unsigned char)	c;
 	int	i;
 	char*	adresse;
 
@@ -10,7 +9,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	adresse = s;
 	while (n)
 	{
-		adresse[i] = c;
+		adresse[i] = (unsigned char) c;
 		i++;
 		n--;
 	}
