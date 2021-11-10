@@ -1,4 +1,30 @@
-SRCS = fonctions/*.c
+SRCS =	fonctions/ft_isalpha.c \
+	fonctions/ft_isdigit.c \
+	fonctions/ft_isalnum.c \
+	fonctions/ft_isascii.c \
+	fonctions/ft_isprint.c \
+	fonctions/ft_strlen.c \
+	fonctions/ft_memset.c \
+	fonctions/ft_bzero.c \
+	fonctions/ft_memcpy.c \
+	fonctions/ft_memmove.c \
+	fonctions/ft_strlcpy.c \
+	fonctions/ft_strlcat.c \
+	fonctions/ft_toupper.c \
+	fonctions/ft_tolower.c \
+	fonctions/ft_strchr.c \
+	fonctions/ft_strrchr.c \
+	fonctions/ft_strncmp.c \
+	fonctions/ft_memchr.c \
+	fonctions/ft_memcmp.c \
+	fonctions/ft_strnstr.c \
+	fonctions/ft_atoi.c \
+	fonctions/ft_calloc.c \
+	fonctions/ft_strdup.c \
+	fonctions/ft_substr.c \
+	fonctions/ft_strjoin.c \
+	fonctions/ft_strtrim.c \
+	fonctions/ft_split.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -10,14 +36,16 @@ CC = gcc
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I
 
 NAME = libft.a
 
+%.o: %.c
+	clang -Wall -Werror -Wextra -c $< -o $@
 all: $(NAME)
 
-$(NAME): 	$(OBJS)
-			ar rcs $(NAME) $(OBJS
+$(NAME):	$(OBJS)
+			ar rcs $(NAME) $(OBJS)
 
 clean:
 			rm -f $(OBJS) $(BONUS_OBJS)
