@@ -25,6 +25,9 @@ SRCS =	fonctions/ft_isalpha.c \
 	fonctions/ft_strjoin.c \
 	fonctions/ft_strtrim.c \
 	fonctions/ft_split.c \
+	fonctions/ft_strmapi.c \
+	fonctions/ft_striteri.c \
+	fonctions/ft_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 
