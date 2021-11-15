@@ -1,12 +1,12 @@
 #include "../libft.h"
 
 static unsigned int	find_nb_word(char const *s, char c);
-static size_t	find_len_word(char const *s, char c);
+static size_t		find_len_word(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	**output;
 
 	i = 0;
@@ -32,7 +32,7 @@ char	**ft_split(char const *s, char c)
 
 static unsigned int	find_nb_word(char const *s, char c)
 {
-	int		i;
+	int				i;
 	unsigned int	nb_word;
 
 	i = 0;

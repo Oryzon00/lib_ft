@@ -2,10 +2,10 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	start;
-	int	end;
-	char	*newS;
+	int		i;
+	int		start;
+	int		end;
+	char	*new_str;
 
 	i = 0;
 	while (ft_strchr(set, s1[i]) != 0 && s1[i])
@@ -18,13 +18,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 			i--;
 	end = i;
 	i = -1;
-	newS = (char *)malloc(sizeof(char) * (end - start + 1 + 1));
-	if (newS == NULL)
+	new_str = (char *)malloc(sizeof(char) * (end - start + 1 + 1));
+	if (new_str == NULL)
 		return (NULL);
 	while (++i < end - start + 1)
-		newS[i] = s1[i + start];
-	newS[i] = '\0';
-	return (newS);
+		new_str[i] = s1[i + start];
+	new_str[i] = '\0';
+	return (new_str);
 }
-
-

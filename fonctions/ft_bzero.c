@@ -2,8 +2,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char*	adresse;
-	int i;
+	char	*adresse;
+	int		i;
 
 	adresse = s;
 	i = 0;

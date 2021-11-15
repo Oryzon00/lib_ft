@@ -13,10 +13,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n-- > 0)
 			dest_ptr[n] = src_ptr[n];
 	else
+	{
 		while (i < n)
 		{
 			dest_ptr[i] = src_ptr[i];
 			i++;
 		}
+	}
 	return (dest);
 }
