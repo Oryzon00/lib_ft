@@ -27,7 +27,11 @@ SRCS =	fonctions/ft_isalpha.c \
 	fonctions/ft_split.c \
 	fonctions/ft_strmapi.c \
 	fonctions/ft_striteri.c \
-	fonctions/ft_itoa.c
+	fonctions/ft_itoa.c \
+	fonctions/ft_putchar_fd.c \
+	fonctions/ft_putstr_fd.c \
+	fonctions/ft_putendl_fd.c \
+	fonctions/ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
