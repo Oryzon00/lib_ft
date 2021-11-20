@@ -35,7 +35,15 @@ SRCS =	fonctions/ft_isalpha.c \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS = bonus/*.c
+BONUS = fonctions/ft_lstnew.c \
+		fonctions/ft_lsadd_front.c \
+		fonctions/ft_lssize.c \
+		fonctions/ft_lstlast.c \
+		fonctions/ft_lstadd_back.c \
+		fonctions/ft_lstdelone.c \
+		fonctions/ft_lstclear.c \
+		fonctions/ft_lstiter.c \
+		fonctions/ft_lstmap.c
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
