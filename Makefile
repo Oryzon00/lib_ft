@@ -56,7 +56,7 @@ CFLAGS = -Wall -Wextra -Werror -I
 NAME = libft.a
 
 %.o: %.c
-	clang -Wall -Werror -Wextra -c $< -o $@
+	gcc -Wall -Werror -Wextra -c $< -o $@
 all: $(NAME)
 
 $(NAME):	$(OBJS)
