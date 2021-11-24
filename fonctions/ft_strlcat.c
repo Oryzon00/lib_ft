@@ -6,7 +6,7 @@
 /*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:06:31 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/24 18:09:51 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/24 18:15:41 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (size <= dst_size)
 		return (size + src_size);
 	i = 0;
-	while (src[i] && ( i + dst_size + 1) < size)
+	while (src[i] && (i + dst_size + 1) < size)
 	{
 		dst[i + dst_size] = src[i];
 		i++;
