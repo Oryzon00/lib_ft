@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/24 18:16:13 by ajung             #+#    #+#             */
+/*   Updated: 2021/11/24 18:22:35 by ajung            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -48,10 +60,10 @@ void	ft_putnbr_fd(int n, int fd);
 /*3eme partie*/
 typedef struct s_list
 {
-	void	*content;
-	struct 	s_list *next;
+	void			*content;
+	struct s_list	*next;
 
-} t_list;
+}	t_list;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **alst, t_list *new);
