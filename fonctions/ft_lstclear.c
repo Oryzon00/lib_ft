@@ -3,9 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajung <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:42:27 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/23 12:05:32 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/24 14:22:49 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	while (*lst && (*lst)->next)
+	{
+		ft_lstdelone(*lst, del);
+		*lst = (*lst)->next;
+	}
+}
