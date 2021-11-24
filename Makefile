@@ -31,16 +31,16 @@ SRCS =	fonctions/ft_isalpha.c \
 	fonctions/ft_putchar_fd.c \
 	fonctions/ft_putstr_fd.c \
 	fonctions/ft_putendl_fd.c \
-	fonctions/ft_putnbr_fd.c
+	fonctions/ft_putnbr_fd.c 
 
 OBJS = $(SRCS:.c=.o)
 
 BONUS = fonctions/ft_lstnew.c \
-		fonctions/ft_lsadd_front.c \
-		fonctions/ft_lssize.c \
+		fonctions/ft_lstadd_front.c \
+		fonctions/ft_lstsize.c \
 		fonctions/ft_lstlast.c \
 		fonctions/ft_lstadd_back.c \
-		fonctions/ft_lstdelone.c \
+		fonctions/ft_lstdelone.c\
 		fonctions/ft_lstclear.c \
 		fonctions/ft_lstiter.c \
 		fonctions/ft_lstmap.c
@@ -71,6 +71,6 @@ fclean:		clean
 re: 		fclean $(NAME)
 
 bonus:		$(OBJS) $(BONUS_OBJS)
-			ar rcs $(NAME) $(OBJS) $(OBJS)
+			ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:		all clean fclean re bonus
