@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajung <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:43:39 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/23 12:12:38 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/25 18:38:48 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*new_str;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	while (ft_strchr(set, s1[i]) != 0 && s1[i])
 		i++;

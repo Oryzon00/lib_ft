@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajung <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:31:48 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/23 12:18:31 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/25 18:36:45 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	output;
-	int	sign;
+	int				i;
+	long long		output;
+	int				sign;
 
 	i = 0;
 	output = 0;
@@ -31,6 +31,10 @@ int	ft_atoi(const char *nptr)
 	{
 		output = nptr[i] - '0' + (output * 10);
 		i++;
+		if (output * sign > 2147483647)
+			return (-1);
+		else if (output * sign < -2147483648)
+			return (0);
 	}
 	return (output * sign);
 }

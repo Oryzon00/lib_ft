@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajung <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:45:36 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/23 11:45:38 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/25 18:06:43 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const char	*src_ptr;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	dest_ptr = dest;
 	src_ptr = src;
 	while (i < n)
