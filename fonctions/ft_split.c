@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajung <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ajung <ajung@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:45:45 by ajung             #+#    #+#             */
-/*   Updated: 2021/11/23 11:45:47 by ajung            ###   ########.fr       */
+/*   Updated: 2021/11/25 18:40:18 by ajung            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	char	**output;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	j = 0;
 	output = malloc(sizeof(char *) * (find_nb_word(s, c) + 1));
